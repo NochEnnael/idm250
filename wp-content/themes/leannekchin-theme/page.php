@@ -1,8 +1,10 @@
+page.php
+<?php get_header(); ?>
+
 <div class="top">
 
     <div class="tophead">
 
-        <?php get_header(); ?>
 
         <div class="articleinfo">
 
@@ -12,7 +14,7 @@
             </p>
 
             <h1 class="articletitle">
-                <?php the_title(); ?>
+              <?php the_title(); ?>
             </h1>
 
             <p class="articledes">

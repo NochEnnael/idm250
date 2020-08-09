@@ -1,64 +1,80 @@
+<?php get_header(); ?>
+
 <div class="top">
 
     <div class="tophead">
 
-        <?php get_header(); ?>
+        <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/blob.svg') ?>
 
-        <div class="articleinfo">
-
-            <p class="category">
-                <!-- This is called class="post-categories" since wordpress names it -->
-                <?php the_category(); ?>
+        <div class="front-title">
+            <p class="front-p">
+                This is <?php the_title(); ?>
             </p>
 
-            <h1 class="articletitle">
-                <?php the_title(); ?>
-            </h1>
+        </div>
 
-            <p class="articledes">
+        <div class="front-subtitle">
+            <p class="front-p">
                 <?php the_excerpt(); ?>
             </p>
 
         </div>
 
+        <a href="#articles">
+            <button>
+                Ready to Read?
+            </button>
+        </a>
+
+
     </div>
 </div>
 
-<main class="main_content">
 
-    <?php while (have_posts()) : the_post(); ?>
+<?php
+// wp-query to get all published posts without pagination
+$allPostsWPQuery = new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1)); ?>
+
+<?php if ($allPostsWPQuery->have_posts()) : ?>
+
+    <div id="articles" class="articles">
+
+        <?php while ($allPostsWPQuery->have_posts()) : $allPostsWPQuery->the_post(); ?>
 
 
-        <div class="container">
-            <!-- Main content  -->
-            <div class="content-sidebar">
+            <div class="grid">
 
-                <p class="post_meta">
-                    <?php the_date('F j, Y') ?>
-                </p>
+                <div class="articleimg">
 
-                <div class="thumbnail">
-                    <?php the_post_thumbnail(); ?>
+                    <div class="thumb">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail(); ?>
+
+                            <p class="arttitle">
+                                <?php the_title(); ?>
+                            </p>
+
+                            <p class="date">
+                                <?php the_date('F j, Y') ?>
+                            </p>
+                        </a>
+
+                    </div>
+
+                    <!-- <img class="previmg"> -->
+
+                    <!-- takes all of the posts with the cateorgory of culture -->
+
                 </div>
 
-                <div class="page-builder">
-                    <?php the_content(); ?>
-                </div>
-
-                <?php the_tags(); ?>
             </div>
 
-            <!-- Sidebar content -->
+        <?php endwhile; ?>
 
-            <?php get_sidebar(); ?>
+        <?php else : ?>
 
-        </div>
+        <?php endif; ?>
 
+    </div>
 
-
-
-    <?php endwhile; ?>
-
-</main>
-
-<?php get_footer(); ?>
+    <?php get_footer(); ?>

@@ -1,125 +1,220 @@
-
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Arrow svg for single.php */
+.arrowsvg {
+  margin: 0 auto;
+  width: 2rem;
+  padding-top: 1rem;
+}
+
+#Capa_1 {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Grid for Archive */
+
+.articles {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 1rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.grid {
+  width: 23rem;
+  background-color: #f54c2f;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin: 0 auto;
+}
+
+.articleimg {
+  padding-bottom: 2rem;
+}
+
+/*  .thumb{
+   width: 23rem;
+ }
+ */
+
+.thumb img {
+  width: 23rem;
+  height: 15rem;
+  opacity: 100%;
+  transition: opacity .5s ease-in-out;
+}
+
+.thumb img:hover {
+  opacity: 60%;
+}
+
+.attachment-post-thumbnail {
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
+/* https://alligator.io/css/cropping-images-object-fit/ */
+
+/* 
+.thumb img {
+  width: 100%;
+  opacity: 100%;
+  transition: opacity .5s ease-in-out;
+}
+ */
+
+.arttitle {
+  padding-left: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.date {
+  color: white;
+  padding-right: 1rem;
+  float: right;
+  font-weight: regular;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* ---------- */
+
+/* Responsive thumbnail photo in single.php */
+
+.thumbnail {
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  margin: 0 auto;
+} 
+
+.thumbnail img {
+  width: 70%;
+  height: auto;
 }
 
 
-.thumbnail{
-    padding: 2rem 0 1rem 0;
-    text-align: center;
-    margin: 0 auto;
+.articletitle {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1rem;
 }
-
-.articletitle{
-    font-size: 1.7rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 0;
-    padding: 1rem;
-}
-
 
 .articleinfo p {
-    font-size: 1rem;
-    font-weight: regular;
-    padding: 0 2rem;
-    text-align: center;
+  font-size: 1rem;
+  font-weight: regular;
+  padding: 0 2rem;
+  text-align: center;
 }
 
-.articleinfo ul{
-    list-style-type: none;
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 3.5rem;
+.articleinfo ul {
+  list-style-type: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3.5rem;
 }
-
 
 /* This is for the ordered list design */
 
 .container ol {
-    list-style: none;
-    counter-reset: my-awesome-counter;
+  list-style: none;
+  counter-reset: my-awesome-counter;
 }
 
-.container  ol li {
-    counter-increment: my-awesome-counter;
-  }
-  
+.container ol li {
+  counter-increment: my-awesome-counter;
+}
+
 .container ol li::before {
-    color:#f54c2f;
-    content:  counter(my-awesome-counter);
-    font-weight: bold;
-    font-size: 3rem;
-    margin-right: 1.2rem;
-    line-height: 1.5;
-  }
+  color: #f54c2f;
+  content: counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 1.2rem;
+  line-height: 1.5;
+}
 
 /* This is for the ordered list design */
 
-
 .containter ul {
-    list-style: none;
-  }
-  
-  .containter ul li::before {
-    content: "• ";
-    color: red;
-  }
-
-  /* Sidebar */
-  .container {
-    display: flex;
-  }
-  
-  .content-sidebar {
-    width: 100%;
-  }
-  
-  .right-sidebar {
-    display: none;
-  } 
-
-    /* Sidebar */
-
-
-blockquote{
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
+  list-style: none;
 }
 
-.main_content a { 
-    color: #f54c2f;
-} /* Link color for the content on the page */
-
-.top{
-    background-color: #f54c2f;
-    padding-bottom: 5rem;
+.containter ul li::before {
+  content: "• ";
+  color: red;
 }
 
-.tophead{
-/*     padding-top: 2rem;
+/* Sidebar */
+
+.container {
+  display: flex;
+}
+
+.content-sidebar {
+  width: 100%;
+}
+
+.right-sidebar {
+  display: none;
+}
+
+/* Sidebar */
+
+blockquote {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.main_content a {
+  color: #f54c2f;
+}
+
+.main_content svg {
+  width: 2rem;
+  margin: 0 auto;
+}
+
+/* Link color for the content on the page */
+
+.top {
+  background-color: #f54c2f;
+  padding-bottom: 5rem;
+}
+
+.tophead {
+  /*     padding-top: 2rem;
     padding-left: 1rem; */
-    color: white;
+  color: white;
+  padding-top: 2rem;
+  padding-left: 1rem;
 }
 
-.page-builder{
-    font-size: 1rem;
-    margin: 0 auto;
-    padding: 3rem;
+.page-builder {
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 3rem;
 }
 
-.post_meta{
-    font-size: 1.2rem;
-    text-align: center;
+.post_meta {
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 /* Footer Menu  */
 
-#footer{
+#footer {
   display: flex;
   background-color: #FAD5CE;
   padding: 2rem;
@@ -134,29 +229,27 @@ blockquote{
   font-weight: bold;
 }
 
-#foot-head{
+#foot-head {
   width: 50%;
   text-align: left;
-  
 }
 
-#foot-head h1{
-font-size: 1.5rem;
+#foot-head h1 {
+  font-size: 1.5rem;
 }
 
-
-#foot-head h2{
+#foot-head h2 {
   font-size: 1rem;
-  }
-  
+}
 
-#foot-right{
+#foot-right {
   width: 50%;
   text-align: right;
-
 }
 
-
+header {
+  background-color: #f54c2f;
+}
 
 /* THIS IS THE MENU */
 
@@ -165,314 +258,336 @@ font-size: 1.5rem;
   width: 20%;
 }
 
-body
- {
-   margin: 0;
-   padding: 0;
-   /* make it look decent enough */
-   font-family: "Helvetica Neuve", "Avenir", sans-serif;
-   
-   overflow-x: hidden; 
- }
- 
- #menuToggle
- {
-   display: block;
-   position: relative;
-   top: 20px;
-   
-   /* left: 50px; */
-   right: 50px;
-   float: right;
-   
-   z-index: 1;
-   
-   -webkit-user-select: none;
-   user-select: none;
- }
- 
- #menuToggle a
- {
-   text-decoration: none;
-   color: grey;
-   
-   transition: color 0.3s ease;
- }
- 
- #menuToggle a:hover
- {
-   color: #f54c2f;
- }
- 
- 
- #menuToggle input
- {
-   display: block;
-   width: 40px;
-   height: 32px;
-   position: absolute;
-   top: -7px;
-   right: -5px;
-   
-   cursor: pointer;
-   
-   opacity: 0; /* hide this */
-   z-index: 2; /* and place it over the hamburger */
-   
-   -webkit-touch-callout: none;
- }
- 
- /*
+body {
+  margin: 0;
+  padding: 0;
+  /* make it look decent enough */
+  font-family: "Helvetica Neuve", "Avenir", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Front page */
+
+button {
+  border-radius: 3rem;
+  background-color: #f54c2f;
+  border: solid .1rem black;
+  padding: 1rem;
+  transition: background-color .4s ease-in;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #f54c2f;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.tophead svg {
+  position: absolute;
+  top: -15rem;
+  right: -37rem;
+  height: 50rem;
+  transform: rotate(45deg);
+}
+
+.front-title {
+  font-size: 1.7rem;
+  font-weight: lightest;
+  margin-bottom: 0;
+}
+
+.front-subtitle {
+  padding-right: 10rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+figcaption {
+  text-align: center;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 20px;
+  /* left: 50px; */
+  right: 50px;
+  float: right;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: grey;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #f54c2f;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
   * Just a quick hamburger
   */
- #menuToggle span
- {
-   display: block;
-   width: 33px;
-   height: 4px;
-   margin-bottom: 5px;
-   position: relative;
-   
-   background: black;
-   border-radius: 3px;
-   
-   z-index: 1;
-   
-   transform-origin: 4px 0px;
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               opacity 0.55s ease;
- }
- 
- #menuToggle span:first-child
- {
-   transform-origin: 0% 0%;
- }
- 
- #menuToggle span:nth-last-child(2)
- {
-   transform-origin: 0% 100%;
- }
- 
- /* 
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: black;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
   * Transform all the slices of hamburger
   * into a crossmark.
   */
- #menuToggle input:checked ~ span
- {
-   opacity: 1;
-   transform: rotate(45deg) translate(-2px, -1px);
-   background: white;
- }
- 
- /*
+
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+/*
   * But let's hide the middle one.
   */
- #menuToggle input:checked ~ span:nth-last-child(3)
- {
-   opacity: 0;
-   transform: rotate(0deg) scale(0.2, 0.2);
- }
- 
- /*
+
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
   * Ohyeah and the last one should go the other direction
   */
- #menuToggle input:checked ~ span:nth-last-child(2)
- {
-   transform: rotate(-45deg) translate(0, -1px);
- }
- 
- /*
+
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
   * Jervo .. Make this absolute positioned
   * at the top right of the screen
   */
- #menu
- {
-   position: absolute;
-   width: 300px;
-   /* margin: -100px 0 0 -50px; */
-   margin: -100px 0 0 -300px;
-   padding: 50px;
-   padding-top: 125px;
-   
-   background: black;
-   list-style-type: none;
-   -webkit-font-smoothing: antialiased;
-   /* to stop flickering of text in safari */
-   
-   transform-origin: 0% 0%;
-   /* transform: translate(-100%, 0); */
-   transform: translate(100%, 0);
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
- }
 
- #menu ul {
+#menu {
+  position: absolute;
+  width: 300px;
+  /* margin: -100px 0 0 -50px; */
+  margin: -100px 0 0 -300px;
+  padding: 50px;
+  padding-top: 125px;
+  background: black;
   list-style-type: none;
- }
- 
- #menu li
- {
-   padding: 10px 0;
-   font-size: 22px;
- }
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  /* transform: translate(-100%, 0); */
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
 
- 
- /*
+#menu ul {
+  list-style-type: none;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
   * And let's slide it in by adding or removing the tranform
   */
- #menuToggle input:checked ~ ul
- {
-   transform: none;
- }
- 
- /* NONE MOBILE NAV MENU */
- 
- /* Hide header nav bar on mobile */
- .heading {
-   display: none;
-   background-color: black;
-   width: 40%;
-   font-size: 1.3rem;
-   font-weight: 500;
- }
- 
- .heading ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
- }
- 
- .heading li {
-   float: left;
- }
 
+#menuToggle input:checked~ul {
+  transform: none;
+}
 
- .heading a
- {
-   text-decoration: none;
-   transition: color 0.3s ease;
- }
- 
- .heading a:hover
- {
-   color: #f54c2f;
- }
- 
- 
- .heading li a {
-   display: block;
-   text-align: center;
-   align-items: center;
-   padding: 16px;
-   text-decoration: none;
-     color: white;
- }
- 
- 
- .heading .current {
-   color: #f54c2f;
-   cursor: default;
- }
+/* NONE MOBILE NAV MENU */
 
- /* sidebar styling!!!! */
+/* Hide header nav bar on mobile */
 
- .right-sidebar h2 {
-   border-bottom: #f54c2f solid .2rem;
-   width: 30%;
- }
- 
+.heading {
+  display: none;
+  background-color: black;
+  width: 40%;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
 
- .right-sidebar li {
+.heading ul {
   list-style-type: none;
- }
- 
- 
- /* SWAP NAV MENUS 640px a.k.a 40em */
- 
- @media screen and (min-width: 768px) {
-   nav {
-     display: none;
-   }
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-   .heading {
-     display: block;
-     font-size: 1.5rem;
-   }
+.heading li {
+  float: left;
+}
 
+.heading a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.heading a:hover {
+  color: #f54c2f;
+}
+
+.heading li a {
+  display: block;
+  text-align: center;
+  align-items: center;
+  padding: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.heading .current {
+  color: #f54c2f;
+  cursor: default;
+}
+
+/* sidebar styling!!!! */
+
+.right-sidebar h2 {
+  border-bottom: #f54c2f solid .2rem;
+  width: 30%;
+}
+
+.right-sidebar li {
+  list-style-type: none;
+}
+
+/* SWAP NAV MENUS 640px a.k.a 40em */
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: none;
+  }
+  .heading {
+    display: block;
+    font-size: 1.5rem;
+  }
   .articleinfo p {
     font-size: 1.5rem;
-
-}
-
-.articletitle{
+  }
+  .articletitle {
     font-size: 3rem;
-}
-
-
-blockquote{
+  }
+  blockquote {
     font-size: 1.5rem;
-}
-
-.page-builder{
+  }
+  .page-builder {
     font-size: 1.2rem;
     padding: 3rem 15rem;
-}
-
- }
-
- @media screen and (min-width: 1024px) {
-
-  .articleinfo p {
-        padding: 0 20rem;  
- }
-
- .heading {
-  width: 50%;
-  display: block;
-  font-size: 1.7rem;
-}
-
-
- blockquote{
-    font-size: 2rem;
-}
-
- .page-builder{
-    padding: 3rem 15rem;
-}
-
-#footer-menu li {
-  font-size: 1.5rem;
-
-}
-
-#foot-head h1{
-  font-size: 2rem;
   }
-  
-  
-  #foot-head h2{
+  /* front page */
+  button {
+    font-size: 1.2rem;
+    border-radius: 3rem;
+    background-color: #f54c2f;
+    border: solid .1rem black;
+    padding: 1rem;
+  }
+  .front-title {
+    font-size: 3rem;
+  }
+  .front-subtitle {
+    font-size: 3rem;
+  }
+  .articles {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .articles {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .articleinfo p {
+    padding: 0 20rem;
+  }
+  .heading {
+    width: 50%;
+    display: block;
+    font-size: 1.7rem;
+  }
+  blockquote {
+    font-size: 2rem;
+  }
+  .page-builder {
+    padding: 3rem 15rem;
+  }
+  #footer-menu li {
     font-size: 1.5rem;
-    }
-
-    /* Sidebar only shown in the desktop mode */
-
-    .container {
-      display: flex;
-    }
-    
-    .content-sidebar {
-      width: 75%;
-    }
-    
-    .right-sidebar {
-      display: block;
-      width: 25%;
-      padding-right: 1rem;
-    } 
-
-
+  }
+  #foot-head h1 {
+    font-size: 2rem;
+  }
+  #foot-head h2 {
+    font-size: 1.5rem;
+  }
+  /* Sidebar only shown in the desktop mode */
+  .container {
+    display: flex;
+  }
+  .content-sidebar {
+    width: 75%;
+  }
+  .right-sidebar {
+    display: block;
+    width: 25%;
+    padding-right: 1rem;
+  }
+  /* front page */
+  .tophead svg {
+    top: -9rem;
+    right: -33rem;
+    height: 55rem;
+    transform: rotate(35deg);
+  }
+  .front-title {
+    font-size: 4rem;
+  }
+  .front-subtitle {
+    font-size: 4rem;
+    padding-right: 21rem;
+  }
 }

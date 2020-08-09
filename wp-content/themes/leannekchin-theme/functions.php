@@ -1,4 +1,3 @@
-
 <?php
 
 function add_post_thumbnails_support() {
@@ -23,7 +22,7 @@ add_action('wp_enqueue_scripts', 'include_css_files');
  * @link https://developer.wordpress.org/reference/functions/wp_enqueue_style/
  */
 function include_js_files() {
-    wp_enqueue_script('idm250-js', get_template_directory_uri() . '/dist/scripts/app.js');
+    wp_enqueue_script('idm250-js', get_template_directory_uri() . '/dist/scripts/app.js', [], false, true);
 }
 
 // When WP performs this action, call our function

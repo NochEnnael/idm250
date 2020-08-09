@@ -1,8 +1,9 @@
+<?php get_header(); ?>
+
 <div class="top">
 
     <div class="tophead">
 
-        <?php get_header(); ?>
 
         <div class="articleinfo">
 
@@ -19,15 +20,19 @@
                 <?php the_excerpt(); ?>
             </p>
 
-
         </div>
 
     </div>
 </div>
 
+<div class="arrowsvg" >
+    <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/arrow.svg') ?>  
+</div>
+
 <main class="main_content">
 
     <?php while (have_posts()) : the_post(); ?>
+
 
 
         <div class="container">
