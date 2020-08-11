@@ -7,26 +7,26 @@
 
         <div class="articleinfo">
 
-            <p class="category">
+            <h2 class="category">
                 <!-- This is called class="post-categories" since wordpress names it -->
                 <?php the_category(); ?>
-            </p>
+            </h2>
 
             <h1 class="articletitle">
                 <?php the_title(); ?>
             </h1>
 
-            <p class="articledes">
+            <h3 class="articledes">
                 <?php the_excerpt(); ?>
-            </p>
+            </h3>
 
         </div>
 
     </div>
 </div>
 
-<div class="arrowsvg" >
-    <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/arrow.svg') ?>  
+<div class="arrowsvg">
+    <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/arrow.svg') ?>
 </div>
 
 <main class="main_content">
@@ -39,19 +39,24 @@
             <!-- Main content  -->
             <div class="content-sidebar">
 
-                <p class="post_meta">
+                <h6 class="post_meta">
                     <?php the_date('F j, Y') ?>
-                </p>
+                </h6>
 
                 <div class="thumbnail">
                     <?php the_post_thumbnail(); ?>
                 </div>
 
                 <div class="page-builder">
-                    <?php the_content(); ?>
+                    <h4>
+                        <?php the_content(); ?>
+                    </h4>
+
                 </div>
 
-                <?php the_tags(); ?>
+                <h5>
+                    <?php the_tags(); ?>
+                </h5>
             </div>
 
             <!-- Sidebar content -->

@@ -207,8 +207,14 @@ blockquote {
   padding: 3rem;
 }
 
-.post_meta {
+h3, h4, h5{
+  font-weight: lighter;
+}
+
+
+h6{
   font-size: 1.2rem;
+  font-weight: lighter;
   text-align: center;
 }
 

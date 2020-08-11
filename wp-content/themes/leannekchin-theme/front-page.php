@@ -31,6 +31,9 @@
 </div>
 
 
+
+
+
 <?php
 // wp-query to get all published posts without pagination
 $allPostsWPQuery = new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1)); ?>
