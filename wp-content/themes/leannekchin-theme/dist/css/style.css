@@ -4,6 +4,7 @@ a {
 }
 
 /* Arrow svg for single.php */
+
 .arrowsvg {
   margin: 0 auto;
   width: 2rem;
@@ -25,6 +26,12 @@ a {
   margin-top: 2rem;
 }
 
+
+.articleimg {
+  padding-bottom: 2rem;
+}
+
+
 .grid {
   width: 23rem;
   background-color: #f54c2f;
@@ -32,15 +39,6 @@ a {
   margin-left: 1rem;
   margin: 0 auto;
 }
-
-.articleimg {
-  padding-bottom: 2rem;
-}
-
-/*  .thumb{
-   width: 23rem;
- }
- */
 
 .thumb img {
   width: 23rem;
@@ -57,6 +55,32 @@ a {
   object-fit: cover;
   object-position: 100% 0;
 }
+/*  .thumb{
+   width: 23rem;
+ }
+ */
+
+ .oops-arch {
+  color: black;
+  border: solid black .1rem;
+  background-color: white;
+  border-radius: 25px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  transform: rotate(7deg);
+  filter: drop-shadow(3px 10px 4px rgba(0, 0, 0, 0.219));
+}
+
+.oops-description-arch {
+  text-align: center;
+}
+
+.oops-description-archh1 {
+  font-size: 2rem;
+}
+
 
 /* https://alligator.io/css/cropping-images-object-fit/ */
 
@@ -86,19 +110,92 @@ a {
 
 /* ---------- */
 
+/* 404 Page */
+
+.leftblob svg {
+  position: absolute;
+  top: -10rem;
+  left: -30rem;
+  height: 50rem;
+  transform: rotate(230deg);
+  filter: drop-shadow(-2rem 0rem 1rem rgba(0, 0, 0, 0.322));
+}
+
+.rightblob svg {
+  position: absolute;
+  top: -35rem;
+  right: -20rem;
+  height: 60rem;
+  transform: rotate(40deg);
+  filter: drop-shadow(-1rem -1rem 1rem rgba(0, 0, 0, 0.322));
+}
+
+
+.oops {
+  color: white;
+  border: solid white .1rem;
+  border-radius: 25px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 12rem;
+  transform: rotate(7deg);
+}
+
+.oops-description {
+  text-align: center;
+}
+
+.oops-description h1 {
+  font-size: 2rem;
+}
+
+.oops-description h3 {
+  font-size: 1.7rem;
+  font-weight: lighter;
+}
+
+.oopsbut {
+  border-radius: 3rem;
+  background-color: #f54c2f;
+  border: solid .1rem black;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 10rem;
+  transition: background-color .4s ease-in;
+}
+
+.oopsbut:hover {
+  cursor: pointer;
+  color: #f54c2f;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.direct {
+  color: white;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.direct h3 {
+  font-weight: lighter;
+}
+
 /* Responsive thumbnail photo in single.php */
 
 .thumbnail {
   padding: 2rem 0 1rem 0;
   text-align: center;
   margin: 0 auto;
-} 
+}
 
 .thumbnail img {
   width: 70%;
   height: auto;
 }
-
 
 .articletitle {
   font-size: 1.7rem;
@@ -188,12 +285,12 @@ blockquote {
 
 /* Link color for the content on the page */
 
-.top {
+.top, .top-error {
   background-color: #f54c2f;
   padding-bottom: 5rem;
 }
 
-.tophead {
+.tophead, .tophead-error {
   /*     padding-top: 2rem;
     padding-left: 1rem; */
   color: white;
@@ -207,12 +304,11 @@ blockquote {
   padding: 3rem;
 }
 
-h3, h4, h5{
+h3, h4, h5 {
   font-weight: lighter;
 }
 
-
-h6{
+h6 {
   font-size: 1.2rem;
   font-weight: lighter;
   text-align: center;
@@ -257,7 +353,7 @@ header {
   background-color: #f54c2f;
 }
 
-/* THIS IS THE MENU */
+/* THIS IS THE MENU  THIS IS THE MENU  THIS IS THE MENU */
 
 .current-menu-item {
   color: #f54c2f;
@@ -290,6 +386,14 @@ button:hover {
 }
 
 .tophead svg {
+  position: absolute;
+  top: -15rem;
+  right: -37rem;
+  height: 50rem;
+  transform: rotate(45deg);
+}
+
+.tophead-blob svg {
   position: absolute;
   top: -15rem;
   right: -37rem;
@@ -540,6 +644,27 @@ figcaption {
     display: grid;
     grid-template-columns: auto auto;
   }
+  /* 404 ERROR PAGE */
+
+
+  .oops, .oops-arch {
+    width: 50%;
+  }
+  .oops-description .oops-description-arch h1 {
+    font-size: 2.7rem;
+  }
+  .oops-description .oops-description-arch h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+  }
+  .direct {
+    width: 70%;
+    margin-top: 4rem;
+  }
+  .direct h3 {
+    font-size: 1.5rem;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -596,4 +721,54 @@ figcaption {
     font-size: 4rem;
     padding-right: 21rem;
   }
+
+  /* 404 Error Page */
+
+  .oops{
+    margin-top: 10rem;
+    width: 40%;
+}
+
+.oops-arch{
+  width: 40%;
+}
+
+.oops-description .oops-description-arch h1 {
+    font-size: 3.5rem;
+}
+
+.oops-description .oops-description-arch h3 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.direct {
+    width: 40%;
+    margin-top: 4rem;
+}
+
+.direct h3 {    
+    font-size:1.5rem;
+}
+
+.leftblob svg {
+  position: absolute;
+  top: -10rem;
+  left: -20rem;
+  height: 50rem;
+  transform: rotate(230deg);
+  filter: drop-shadow(-2rem 0rem 1rem rgba(0, 0, 0, 0.322));
+}
+
+.rightblob svg {
+  position: absolute;
+  top: -25rem;
+  right: -20rem;
+  height: 60rem;
+  transform: rotate(40deg);
+  filter: drop-shadow(-1rem -1rem 1rem rgba(0, 0, 0, 0.322));
+}
+
+
+
 }
