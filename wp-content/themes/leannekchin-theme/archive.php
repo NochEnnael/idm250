@@ -9,7 +9,7 @@
     <div class="tophead">
 
         <div class="tophead-blob">
-            <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/blob.svg') ?>
+            <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/think.svg') ?>
         </div>
 
         <div class="front-title">

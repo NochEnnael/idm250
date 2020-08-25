@@ -1,7 +1,122 @@
+html{
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Table */
+
+table, td, th {
+  border: 1px solid rgb(226, 226, 226);
+}
+
+th, td {
+  padding: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  height: 2rem;
+  background-color: rgb(233, 233, 233);
+  border-bottom: .5rem solid #f54c2f;
+}
+
+
+
+/* For the Search Page */
+
+#searchfield {
+  margin-top: 4rem;
+  border-style: none;
+  border-bottom: solid .2rem black ;
+  width: 50%;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.searchlist{
+  list-style-type: none;
+}
+
+.result_list{
+  border-bottom: solid .3rem rgb(219, 219, 219);
+  margin-bottom: 2rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  font-size: 2rem;
+}
+
+.results{
+  color: #f54c2f;
+  margin-bottom: 2rem;
+}
+
+.result_thumb img{
+  width: 15rem;
+  height: 10rem;
+  opacity: 100%;
+}
+
+.result_thumb {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.left_thumb {
+  width: 45%;
+/*   width: 50%; */
+padding-left: .5rem;
+  margin-bottom: 2rem;
+}
+
+.pic_thumb{
+  width: 55%;
+/*   width: 25%; */
+}
+
+
+.left_thumb li {
+  list-style-type: none;
+}
+
+
+#go {
+border: solid .1rem black;
+background-color: black;
+color: white;
+font-size: 1.5rem;
+}
+
+#go:hover {
+  cursor: pointer;
+}
+
+.titleresult{
+  color: black;
+  margin-bottom: 0;
+}
+
+.categoryresult{
+  font-size: 1rem;
+}
+
+
 
 /* Arrow svg for single.php */
 
@@ -34,11 +149,21 @@ a {
 
 .grid {
   width: 23rem;
-  background-color: #f54c2f;
+/*   background-color: #f54c2f; */
   margin-right: 1rem;
   margin-left: 1rem;
   margin: 0 auto;
 }
+
+.grid:nth-child(even) {
+    background-color: #f54c2f;
+  }
+
+.grid:nth-child(odd) {
+    background-color: black;
+  }
+
+  /* https://www.w3schools.com/cssref/sel_nth-child.asp */
 
 .thumb img {
   width: 23rem;
@@ -55,6 +180,8 @@ a {
   object-fit: cover;
   object-position: 100% 0;
 }
+
+
 /*  .thumb{
    width: 23rem;
  }
@@ -196,6 +323,8 @@ a {
   width: 70%;
   height: auto;
 }
+
+
 
 .articletitle {
   font-size: 1.7rem;
@@ -353,27 +482,12 @@ header {
   background-color: #f54c2f;
 }
 
-/* THIS IS THE MENU  THIS IS THE MENU  THIS IS THE MENU */
-
-.current-menu-item {
-  color: #f54c2f;
-  width: 20%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  /* make it look decent enough */
-  font-family: "Helvetica Neuve", "Avenir", sans-serif;
-  overflow-x: hidden;
-}
-
 /* Front page */
 
 button {
   border-radius: 3rem;
   background-color: #f54c2f;
-  border: solid .1rem black;
+  border: solid .1rem rgb(24, 23, 23);
   padding: 1rem;
   transition: background-color .4s ease-in;
 }
@@ -387,19 +501,20 @@ button:hover {
 
 .tophead svg {
   position: absolute;
-  top: -15rem;
-  right: -37rem;
-  height: 50rem;
-  transform: rotate(45deg);
+  right: -5rem;
+  top: 5rem;
+  height: 10rem;
+  transform: rotate(10deg);
 }
 
-.tophead-blob svg {
+.tophead-blob  svg {
   position: absolute;
-  top: -15rem;
-  right: -37rem;
-  height: 50rem;
-  transform: rotate(45deg);
+  right: -5rem;
+  top: 7rem;
+  height: 8rem;
+  transform: rotate(10deg);
 }
+
 
 .front-title {
   font-size: 1.7rem;
@@ -414,8 +529,38 @@ button:hover {
 }
 
 figcaption {
+  padding-top: 1rem;
   text-align: center;
+  font-size: 1rem;
 }
+
+/* MENUUUUUUUU HEREEE */
+
+
+/* THIS IS THE MENU  THIS IS THE MENU  THIS IS THE MENU */
+
+.current-menu-item {
+  color: #f54c2f;
+  width: 20%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* make it look decent enough */
+  font-family: "Helvetica Neuve", "Avenir", sans-serif;
+  overflow:hidden;
+}
+
+svg{
+  overflow-x: hidden;
+}
+
+*,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
 
 #menuToggle {
   display: block;
@@ -507,18 +652,16 @@ figcaption {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
-  * Jervo .. Make this absolute positioned
-  * at the top right of the screen
-  */
+
 
 #menu {
   position: absolute;
   width: 300px;
   /* margin: -100px 0 0 -50px; */
-  margin: -100px 0 0 -300px;
+  margin: -100px 0 0 -200px;
   padding: 50px;
   padding-top: 125px;
+  
   background: black;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -535,7 +678,7 @@ figcaption {
 
 #menu li {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 1.3rem;
 }
 
 /*
@@ -545,6 +688,8 @@ figcaption {
 #menuToggle input:checked~ul {
   transform: none;
 }
+
+
 
 /* NONE MOBILE NAV MENU */
 
@@ -590,6 +735,10 @@ figcaption {
 .heading .current {
   color: #f54c2f;
   cursor: default;
+}
+
+.heading svg {
+  width: 1rem;
 }
 
 /* sidebar styling!!!! */
@@ -665,6 +814,18 @@ figcaption {
     font-size: 1.5rem;
   }
 
+  .tophead svg {
+    right: 5rem;
+    top: 3rem;
+    height: 15rem;
+  }
+
+  .tophead-blob  svg{
+    right: 5rem;
+    top: 3rem;
+    height: 15rem;
+
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -708,12 +869,19 @@ figcaption {
     padding-right: 1rem;
   }
   /* front page */
-  .tophead svg {
-    top: -9rem;
-    right: -33rem;
-    height: 55rem;
-    transform: rotate(35deg);
+  .tophead  svg {
+    right: 5rem;
+    top: 26rem;
+    height: 20rem;
   }
+
+  .tophead-blob svg {
+    right: 5rem;
+    top: 16rem;
+    height: 20rem;
+  }
+
+
   .front-title {
     font-size: 4rem;
   }
@@ -751,24 +919,37 @@ figcaption {
     font-size:1.5rem;
 }
 
+.rightblob{
+  overflow-x: hidden;
+}
+
 .leftblob svg {
   position: absolute;
-  top: -10rem;
-  left: -20rem;
-  height: 50rem;
-  transform: rotate(230deg);
+  top: 5rem;
+  left: 2rem;
+  height: 15rem;
+  transform: rotate(5deg);
   filter: drop-shadow(-2rem 0rem 1rem rgba(0, 0, 0, 0.322));
 }
 
-.rightblob svg {
+/* .rightblob svg {
   position: absolute;
   top: -25rem;
   right: -20rem;
   height: 60rem;
   transform: rotate(40deg);
   filter: drop-shadow(-1rem -1rem 1rem rgba(0, 0, 0, 0.322));
+} */
+
+/* Search */
+
+.left_thumb {
+  width: 50%;
+
 }
 
-
+.pic_thumb{
+  width: 25%;
+}
 
 }

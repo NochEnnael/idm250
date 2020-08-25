@@ -5,12 +5,7 @@ get_header('blank'); ?>
     <div class="tophead-error">
 
         <div class="leftblob">
-            <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/blobby.svg') ?>
-        </div>
-
-
-        <div class="rightblob">
-            <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/blobby.svg') ?>
+        <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/think.svg') ?>
         </div>
 
 

@@ -6,7 +6,7 @@ get_header(); ?>
 
     <div class="tophead">
 
-        <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/blob.svg') ?>
+        <?php echo file_get_contents(get_template_directory_uri() . '/dist/graphics/think.svg') ?>
 
 
         <div class="front-title">
