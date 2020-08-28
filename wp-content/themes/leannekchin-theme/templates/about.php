@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
 Template Name: About
@@ -13,23 +13,45 @@ get_header(); ?>
 
     <div class="tophead">
 
+        <?php (get_field('about_desc')); ?>
 
         <div class="articleinfo">
-
-            <h2 class="category">
-                <!-- This is called class="post-categories" since wordpress names it -->
-                <?php the_category(); ?>
-            </h2>
 
             <h1 class="articletitle">
                 <?php the_title(); ?>
             </h1>
 
             <h3 class="articledes">
-                <?php the_excerpt(); ?>
+                <?php echo get_field('about_desc') ?>
             </h3>
+
+
 
         </div>
 
     </div>
 </div>
+
+<div class="about-thumb">
+    <?php the_post_thumbnail(); ?>
+</div>
+
+<?php (get_field('your_name')); ?>
+
+<?php while (have_posts()) : the_post(); ?>
+
+    <div class="about-des">
+        <h1>
+            <?php echo get_field('your_name') ?>
+        </h1>
+
+        <p>
+            <?php the_content(); ?>
+        </p>
+        
+    </div>
+
+<?php endwhile; ?>
+
+<?php
+get_footer(); ?>

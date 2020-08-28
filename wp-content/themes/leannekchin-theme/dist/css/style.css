@@ -29,6 +29,65 @@ th {
   border-bottom: .5rem solid #f54c2f;
 }
 
+/* About Template Page */
+
+.about-thumb  {
+/*   background-color: lightgray; */
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.about-thumb img {
+  width: 70%;
+  object-position: 50% 0;
+}
+
+.articledes {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 80%;
+}
+
+.about-des h1{
+  background-color: #f54c2f;
+  color: white;
+  font-weight: lighter;
+  margin: 0 auto;
+  position: relative;
+  padding: .5rem;
+  text-align: center;
+  top: -1rem;
+  width: fit-content;
+}
+
+.about-des p {
+  width: 80%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.about-des ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-des ol li {
+  counter-increment: my-awesome-counter;
+}
+
+.about-des ol li::before {
+  color: #f54c2f;
+  content: counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 1.2rem;
+  line-height: 1.5;
+}
+
 
 
 /* For the Search Page */
@@ -352,7 +411,7 @@ font-size: 1.5rem;
 
 /* This is for the ordered list design */
 
-.container ol {
+ .container ol {
   list-style: none;
   counter-reset: my-awesome-counter;
 }
@@ -826,6 +885,13 @@ svg{
     height: 15rem;
 
   }
+
+  /* About Template */
+
+  .about-thumb img {
+    width: 60%;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -950,6 +1016,34 @@ svg{
 
 .pic_thumb{
   width: 25%;
+}
+
+/* About Template Page */
+
+.articledes {
+  font-size: 1.4rem;
+}
+
+.about-thumb  {
+  /*   background-color: lightgray; */
+  text-align: left;
+  position: relative;
+  left: 20%;
+  }
+
+.about-thumb img {
+  width: 40%;
+  height: 60%;
+}
+
+.about-des h1{
+  padding: 1rem;
+  top: -30rem;
+  left: 10rem;
+}
+
+.about-des p {
+  font-size: 1.3rem;
 }
 
 }

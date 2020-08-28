@@ -23,6 +23,7 @@
                 <h5>
                     <?php the_tags(); ?>
                 </h5>
+
             </div>
 
             <!-- Sidebar content -->
