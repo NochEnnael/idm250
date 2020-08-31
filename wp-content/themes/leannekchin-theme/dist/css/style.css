@@ -8,6 +8,33 @@ a {
   color: inherit;
 }
 
+/* Contact Form */
+
+.wpcf7 label{
+  font-size: 1rem;
+}
+
+.wpcf7 form{
+  text-align: left;
+  padding-top: 2rem
+}
+
+.wpcf7 input[type=submit]{
+border-radius: 3rem;
+background-color: white;
+border: solid .1rem  #f54c2f;
+color: #f54c2f;
+padding: 1rem;
+width: 30%;
+transition: .5s ease;
+}
+
+.wpcf7 input[type=submit]:hover{
+  cursor: pointer;
+  background-color: #f54c2f;
+  color: white;
+  }
+
 /* Table */
 
 table, td, th {
