@@ -47,7 +47,7 @@ th {
   text-align: center;
   margin: 0 auto;
   padding: 1rem;
-  width: 80%;
+  width: 90%;
 }
 
 .about-des h1{
@@ -809,6 +809,10 @@ svg{
 
 .right-sidebar li {
   list-style-type: none;
+}
+
+.right-sidebar li ul{
+  padding-left: 0;
 }
 
 /* SWAP NAV MENUS 640px a.k.a 40em */

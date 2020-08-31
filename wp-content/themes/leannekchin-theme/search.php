@@ -4,7 +4,7 @@
 
     <section>
 
-        <form action="/idm250/" method="get">
+        <form action="/idm250" method="get">
 
             <label for="searchfield'">Search</label>
             <input type="text" name="s" id='searchfield' value="<?php the_search_query() ?>">
