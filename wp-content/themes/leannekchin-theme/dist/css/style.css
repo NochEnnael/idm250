@@ -635,12 +635,9 @@ body {
   padding: 0;
   /* make it look decent enough */
   font-family: "Helvetica Neuve", "Avenir", sans-serif;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
-svg{
-  overflow-x: hidden;
-}
 
 *,
  *::before,
